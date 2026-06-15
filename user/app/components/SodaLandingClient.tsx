@@ -503,12 +503,41 @@ export default function SodaLandingClient() {
   }, []);
 
   useEffect(() => {
-    if ((window as any).gsap) gsapReady.current = true;
-    if (customElements.get('model-viewer')) modelViewerReady.current = true;
-    if (gsapReady.current && modelViewerReady.current && scrollTriggerReady.current) {
-      const cleanup = initAnimations();
-      return cleanup;
-    }
+    let cleanup: (() => void) | undefined;
+    let isCleanedUp = false;
+
+    const checkAndInit = () => {
+      if ((window as any).gsap) gsapReady.current = true;
+      if ((window as any).ScrollTrigger) scrollTriggerReady.current = true;
+      if (typeof window !== 'undefined' && customElements.get('model-viewer')) modelViewerReady.current = true;
+
+      if (gsapReady.current && modelViewerReady.current && scrollTriggerReady.current) {
+        if (!isCleanedUp) {
+          cleanup = initAnimations();
+        }
+        return true;
+      }
+      return false;
+    };
+
+    if (checkAndInit()) return;
+
+    const interval = setInterval(() => {
+      if (checkAndInit()) {
+        clearInterval(interval);
+      }
+    }, 100);
+
+    const timeout = setTimeout(() => {
+      clearInterval(interval);
+    }, 8000);
+
+    return () => {
+      isCleanedUp = true;
+      clearInterval(interval);
+      clearTimeout(timeout);
+      if (cleanup) cleanup();
+    };
   }, [initAnimations]);
 
   /* ── Scroll Reveal Observer ── */
