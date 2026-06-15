@@ -1,0 +1,18 @@
+[MANDATORY SYSTEM RULES]
+Bạn là một AI Coding Agent. Trong dự án này, toàn bộ quy chuẩn, thiết kế kiến trúc và chỉ dẫn kỹ thuật được định nghĩa tập trung trong thư mục `.cursor/rules/`.
+
+Trước khi bắt đầu thực hiện bất kỳ nhiệm vụ nào từ phía người dùng, bạn bắt buộc phải:
+1. Đọc tệp tin quy chuẩn chung: [.cursor/rules/00-global.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/00-global.md)
+2. Luôn tuân thủ quy tắc quản lý ngữ cảnh, chia nhỏ tác vụ và gỡ lỗi tại: [.cursor/rules/claude-best-practices.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/claude-best-practices.md)
+3. Luôn tuân thủ quy trình lập kế hoạch và TDD tại: [.cursor/rules/superpowers-skills.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/superpowers-skills.md)
+4. Luôn áp dụng quy tắc thiết kế giao diện cao cấp chống AI-slop tại: [.cursor/rules/taste-skills.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/taste-skills.md)
+5. Luôn áp dụng động cơ lập luận và nguyên tắc thiết kế UI/UX Pro Max tại: [.cursor/rules/ui-ux-promax-skills.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/ui-ux-promax-skills.md)
+6. Luôn tuân thủ quy trình phát triển kỹ thuật và TDD nâng cao tại: [.cursor/rules/mattpocock-skills.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/mattpocock-skills.md)
+7. Luôn tuân thủ các quy tắc lập trình chuyên nghiệp của Google/Addy Osmani tại: [.cursor/rules/agent-skills.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/agent-skills.md)
+8. Luôn áp dụng các kỹ năng NestJS, React Performance & Testing chọn lọc từ ECC tại: [.cursor/rules/ecc-cherrypicked.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/ecc-cherrypicked.md)
+9. Luôn áp dụng các quy trình phát triển, gỡ lỗi và bảo mật từ AAS tại: [.cursor/rules/antigravity-awesome-skills.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/antigravity-awesome-skills.md)
+10. Nếu tác vụ liên quan đến thư mục `api/` (NestJS), hãy đọc tệp tin: [.cursor/rules/backend.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/backend.md)
+11. Nếu tác vụ liên quan đến thư mục `admin/` hoặc `user/` (Next.js), hãy đọc tệp tin: [.cursor/rules/frontend.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/frontend.md)
+12. Nếu tác vụ liên quan đến viết/sửa test case (Jest/Playwright), hãy đọc tệp tin: [.cursor/rules/testing.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/testing.md)
+
+Nghiêm cấm viết code tự phát không tuân thủ các quy tắc này.

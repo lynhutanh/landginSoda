@@ -1,0 +1,61 @@
+Bạn là trợ lý AI chuyên nghiệp. Trong dự án này, toàn bộ các nguyên tắc thiết kế hệ thống, tiêu chuẩn viết code (Clean Code, SOLID, DRY) và quy định thư mục đều được khai báo tập trung.
+
+Hãy luôn đọc và tuân thủ các quy tắc được định nghĩa sẵn tại thư mục:
+- Quy tắc chung: [.cursor/rules/00-global.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/00-global.md)
+- Kỹ nghệ Agentic & Tối ưu AI: [.cursor/rules/claude-best-practices.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/claude-best-practices.md)
+- Quy trình Superpowers (Planning/TDD): [.cursor/rules/superpowers-skills.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/superpowers-skills.md)
+- Quy chuẩn Thiết kế Frontend (Taste-Skill): [.cursor/rules/taste-skills.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/taste-skills.md)
+- Thiết kế Giao diện UI/UX Pro Max: [.cursor/rules/ui-ux-promax-skills.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/ui-ux-promax-skills.md)
+- Quy trình Phát triển Kỹ thuật (Matt Pocock Skills): [.cursor/rules/mattpocock-skills.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/mattpocock-skills.md)
+- Kỹ năng Lập trình Chuyên nghiệp (Addy Osmani Agent Skills): [.cursor/rules/agent-skills.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/agent-skills.md)
+- Kỹ năng Chọn lọc Everything Claude Code (ECC): [.cursor/rules/ecc-cherrypicked.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/ecc-cherrypicked.md)
+- Kỹ năng Chuyên biệt Antigravity Awesome Skills (AAS): [.cursor/rules/antigravity-awesome-skills.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/antigravity-awesome-skills.md)
+- Quy tắc NestJS Backend: [.cursor/rules/backend.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/backend.md)
+- Quy tắc Next.js Frontend: [.cursor/rules/frontend.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/frontend.md)
+- Quy tắc Kiểm thử (Jest/Playwright): [.cursor/rules/testing.md](file:///Users/nguyendam/Documents/Study/base-code/.cursor/rules/testing.md)
+
+Trước khi chỉnh sửa hoặc viết mã nguồn mới, hãy chủ động đối chiếu với các quy tắc trên để đảm bảo tính nhất quán của dự án.
+
+
+<!-- headroom:rtk-instructions -->
+# RTK (Rust Token Killer) - Token-Optimized Commands
+
+When running shell commands, **always prefix with `rtk`**. This reduces context
+usage by 60-90% with zero behavior change. If rtk has no filter for a command,
+it passes through unchanged — so it is always safe to use.
+
+## Key Commands
+```bash
+# Git (59-80% savings)
+rtk git status          rtk git diff            rtk git log
+
+# Files & Search (60-75% savings)
+rtk ls <path>           rtk read <file>         rtk grep <pattern>
+rtk find <pattern>      rtk diff <file>
+
+# Test (90-99% savings) — shows failures only
+rtk pytest tests/       rtk cargo test          rtk test <cmd>
+
+# Build & Lint (80-90% savings) — shows errors only
+rtk tsc                 rtk lint                rtk cargo build
+rtk prettier --check    rtk mypy                rtk ruff check
+
+# Analysis (70-90% savings)
+rtk err <cmd>           rtk log <file>          rtk json <file>
+rtk summary <cmd>       rtk deps                rtk env
+
+# GitHub (26-87% savings)
+rtk gh pr view <n>      rtk gh run list         rtk gh issue list
+
+# Infrastructure (85% savings)
+rtk docker ps           rtk kubectl get         rtk docker logs <c>
+
+# Package managers (70-90% savings)
+rtk pip list            rtk pnpm install        rtk npm run <script>
+```
+
+## Rules
+- In command chains, prefix each segment: `rtk git add . && rtk git commit -m "msg"`
+- For debugging, use raw command without rtk prefix
+- `rtk proxy <cmd>` runs command without filtering but tracks usage
+<!-- /headroom:rtk-instructions -->

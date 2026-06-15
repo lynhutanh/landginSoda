@@ -1,0 +1,14 @@
+{
+  "admin/{app,src}/**/*.{ts,tsx}": [
+    "yarn --cwd admin lint",
+    "yarn --cwd admin format"
+  ],
+  "api/src/**/*.ts": [
+    "yarn --cwd api lint",
+    "yarn --cwd api format"
+  ],
+  "user/{app,src}/**/*.{ts,tsx}": [
+    "yarn --cwd user lint",
+    "yarn --cwd user format"
+  ]
+}
