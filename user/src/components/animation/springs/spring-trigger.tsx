@@ -59,7 +59,7 @@ export interface VarTextTagProps {
   tag?: Tags;
   children?: React.ReactNode;
   className?: string;
-  style?: CSSProperties;
+  style?: any;
 }
 
 const AnimatedVarTextTag = forwardRef<HTMLElement, VarTextTagProps>(
