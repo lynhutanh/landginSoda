@@ -3,6 +3,8 @@
 
 import { useEffect, useRef, useCallback, useState } from 'react';
 import Script from 'next/script';
+
+
 import { Avatar, AvatarFallback, AvatarImage } from '@components/ui/avatar';
 import { Card, CardContent } from '@components/ui/card';
 import { Marquee } from '@components/ui/3d-testimonials';
@@ -172,7 +174,7 @@ export default function SodaLandingClient() {
   const modelViewerReady = useRef(false);
   const scrollTriggerReady = useRef(false);
   const animFrameRef = useRef<number>(0);
-  const bubbleIntervalRef = useRef<ReturnType<typeof setInterval>>();
+  const bubbleIntervalRef = useRef<ReturnType<typeof setInterval> | undefined>(undefined);
   const [isLoading, setIsLoading] = useState(true);
   const [loadProgress, setLoadProgress] = useState(0);
   const loadedCount = useRef(0);
