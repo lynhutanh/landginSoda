@@ -65,7 +65,6 @@ const AnimatedVarTextTag = forwardRef<HTMLElement, VarTextTagProps>(
   ({ tag = "span", children, className, style, ...props }, outerRef) => {
     const ref = useRef<HTMLElement | null>(null);
     useImperativeHandle(outerRef, () => ref.current as HTMLElement);
-    // @ts-expect-error
     const Tag = animated[tag] as ElementType;
 
     return (

@@ -28,6 +28,9 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "paths": {
+      "@/*": [
+        "./src/*"
+      ],
       "@layouts/*": [
         "./src/layouts/*"
       ],

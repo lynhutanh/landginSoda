@@ -171,7 +171,7 @@ export const TestimonialSlider = ({
           <div className="flex items-center space-x-4 mt-8 md:mt-0">
             <Button
               variant="outline"
-              size="icon"
+              size="md"
               className="rounded-full w-12 h-12 border-white/20 text-white hover:bg-white/10 hover:text-white"
               onClick={handlePrev}
               aria-label="Previous founder"
@@ -179,8 +179,8 @@ export const TestimonialSlider = ({
               <ArrowLeft className="w-5 h-5" />
             </Button>
             <Button
-              variant="default"
-              size="icon"
+              variant="primary"
+              size="md"
               className="rounded-full w-12 h-12 bg-pink-300 text-black hover:bg-pink-200"
               onClick={handleNext}
               aria-label="Next founder"
